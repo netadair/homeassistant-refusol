@@ -1,0 +1,21 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "description": "Wenn Sie Hilfe mit der Konfiguration brauchen: https://github.com/netadair/homeassistant-refusol",
+                "data": {
+                    "username": "Benutzername",
+                    "password": "Passwort"
+                }
+            }
+        },
+        "error": {
+            "auth": "Benutzername/Passwort ist falsch.",
+            "connection": "Kann nicht mit dem Server verbinden.",
+            "unknown": "Unbekannter Fehler."
+        },
+        "abort": {
+            "already_configured": "Dieser Eintrag ist schon konfiguriert."
+        }
+    }
+}
