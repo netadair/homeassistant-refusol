@@ -2,6 +2,8 @@
 
 # Home assistant integration for accessing Refusol/AE Advanced Energy/Refu Elektronik/Siemens PVM/Diehl inverters
 
+:danger: THIS IS JUST BEING DEVELOPED, DO NOT USE. :danger: 
+
 `custom_components/refusol/*` | Integration files, this is where everything happens. | [Documentation](https://developers.home-assistant.io/docs/creating_component_index)
 
 ## How?
