@@ -1,12 +1,12 @@
 {
   "domain": "refusol",
-  "name": "Refusol Integration",
-  "codeowners": [
-    "@netadair"
-  ],
+  "name": "Refusol inverter integration",
+  "codeowners": [ "@netadair" ],
   "config_flow": true,
+  "dependencies": [],
   "documentation": "https://github.com/netadair/homeassistant-refusol",
-  "iot_class": "cloud_polling",
-  "issue_tracker": "https://github.com/ludeeus/homeassistant-refusol/issues",
-  "version": "0.1.0"
+  "integration_type": "hub",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/netadair/homeassistant-refusol/issues",
+  "version": "0.0.1"
 }
