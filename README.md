@@ -1,6 +1,6 @@
 [![Open your Home Assistant instance and open this repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=netadair&repository=homeassistant-refusol&category=integration) [![Open your Home Assistant instance and start setting up this integration.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=refusol)
 
-# Home assistant integration for accessing Refusol/Siemens PVM/Diehl inverters
+# Home assistant integration for accessing Refusol/AE Advanced Energy/Refu Elektronik/Siemens PVM/Diehl inverters
 
 `custom_components/refusol/*` | Integration files, this is where everything happens. | [Documentation](https://developers.home-assistant.io/docs/creating_component_index)
 
