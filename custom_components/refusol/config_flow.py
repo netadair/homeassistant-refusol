@@ -2,11 +2,29 @@
 
 from __future__ import annotations
 
+from typing import Any
+
 import voluptuous as vol
-from homeassistant import config_entries
-from homeassistant.const import CONF_PASSWORD, CONF_USERNAME
+
+from homeassistant.config_entries import (
+    ConfigEntry,
+    ConfigFlow,
+    ConfigFlowResult,
+    OptionsFlow,
+)
+
+from homeassistant.const import (
+    CONF_HOST,
+    CONF_PORT,
+    CONF_PROTOCOL,
+    CONF_SCAN_INTERVAL,
+)
+
+from homeassistant.core import HomeAssistant, callback
+from homeassistant.exceptions import HomeAssistantError
+
 from homeassistant.helpers import selector
-from homeassistant.helpers.aiohttp_client import async_create_clientsession
+#from homeassistant.helpers.aiohttp_client import async_create_clientsession
 from slugify import slugify
 
 from .api import (
@@ -15,7 +33,26 @@ from .api import (
     RefusolApiClientCommunicationError,
     RefusolApiClientError,
 )
-from .const import DOMAIN, LOGGER
+#from .api import API, APIAuthError, APIConnectionError
+
+from .const import LOGGER, DOMAIN, DEFAULT_SCAN_INTERVAL, MIN_SCAN_INTERVAL
+
+#_LOGGER = logging.getLogger(__name__)
+
+PROTOCOLS = [
+    selector.SelectOptionDict(value="USS via TCP", label="USSTCP"),
+    selector.SelectOptionDict(value="RTP", label="RTP"),
+    selector.SelectOptionDict(value="USS via RS485+TCP", label="USSRS485"),
+]
+
+STEP_USER_DATA_SCHEMA = vol.Schema(
+    {
+        vol.Required(CONF_HOST, description={"suggested_value": "1.2.3.4"}): str,
+        vol.Required(CONF_PORT, description={"suggested_value": "21062"}): str,
+        vol.Required(CONF_PROTOCOL, description={"suggested_value": "RTP"}): str,
+    }
+)
+
 
 
 class RefusolFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):

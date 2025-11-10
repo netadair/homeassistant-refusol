@@ -1,21 +1,42 @@
 {
     "config": {
+       "title": "Refusol integration",
         "step": {
             "user": {
-                "description": "If you need help with the configuration have a look here: https://github.com/netadair/homeassistant-refusol",
+                "description": "Configure your inverter; address, port and protocol.",
                 "data": {
-                    "username": "Username",
-                    "password": "Password"
+                    "host": "Host",
+                    "port": "Port",
+                    "protocol": "Protocol"
                 }
-            }
+            },
+            "reconfigure": {
+                "description": "Reconfigure your inverter; address, port and protocol.",
+                "data": {
+                    "host": "Host",
+                    "port": "Port",
+                    "protocol": "Protocol"
+        }
+
         },
         "error": {
-            "auth": "Username/Password is wrong.",
-            "connection": "Unable to connect to the server.",
+            "connection": "Unable to connect to the inverter.",
             "unknown": "Unknown error occurred."
         },
         "abort": {
-            "already_configured": "This entry is already configured."
+            "already_configured": "Device is already configured",
+            "reconfigure_successful": "Reconfiguration successful"
         }
+    },
+    "options": {
+        "step": {
+            "init": {
+               "data": {
+                   "scan_interval": "Scan Interval (seconds)"
+                },
+                "description": "Connection options",
+                "title": "Refusol integration options"
+      }
     }
+  }
 }
