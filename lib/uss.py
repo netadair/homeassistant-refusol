@@ -1523,56 +1523,7 @@ $| = 1;
 
 my $socket = new IO::Socket::INET (
 
-	#    PeerHost => '172.23.84.35',  # WR3 Kokisch
-    #PeerHost => '172.23.16.191',  # WR3 Kokisch via relay
-
-	#PeerHost => '172.23.77.33',  # nm16
-	#PeerHost => '172.23.77.41',  # lg9
-
-	#PeerHost => '172.23.74.33',  # lx16 zschettgau
-	#PeerHost => '172.23.74.34',
-	#PeerHost => '172.23.74.35',
-	#PeerHost => '172.23.74.36',
-	
-	#PeerHost => '172.23.85.33',
-	#PeerHost => '172.23.85.34',
-	#PeerHost => '172.23.85.41',
-
-	#PeerHost => '172.23.70.52',  # sas14w 7018
-	#PeerHost => '172.23.70.36',  # sas8w 3340
-
-	# PeerHost => '172.23.66.33',  # wörbzig 1
-	
-	#PeerHost => '172.23.90.34',  # bs1 13
-
-	#PeerHost => '172.23.88.33',  # ploetzkau 1
-	#PeerHost => '172.23.88.34',  # ploetzkau 2
-
-    #PeerHost => '192.168.10.92', # ersatz von refu
-    #PeerHost => '172.23.80.92', # Refu dirk
-    #PeerHost => '172.23.80.93', # PVM dirk
-    #PeerHost => '172.23.83.33',
-    #PeerHost => '172.23.74.36', # WR lx16 MSR (2) statt 3
-    #PeerHost => '172.23.74.33', # WR lx16 Austria (23)
-	
-	#PeerHost => '172.23.94.33', # Refu Keller AF30
-
-	#PeerHost => '192.168.130.20', # default ip new
-	#PeerHost => '192.168.0.123',  # default ip old
-
-#	PeerHost => '172.23.91.33', # refu neu willerstedt
-	#PeerHost => '172.23.91.34', # refu neu willerstedt
-	PeerHost => '172.23.91.35', # refu neu willerstedt
-
-	#PeerHost => '172.23.101.33', # großmühlingen
-#	PeerHost => '172.23.101.34', # großmühlingen
-
-	#PeerHost => '172.23.102.33', # Drosa
-	#PeerHost => '172.23.102.34', # Drosa
-
-#	PeerHost => '172.23.64.33', # Crüchern
-
-
+    PeerHost => '1.2.3.4', 
 	
     PeerPort => '21062',
     Proto => 'tcp',
